@@ -9,12 +9,6 @@ body {
     flex-direction: column;
 }
 
-@media (min-width: 768px) {
-    .container {
-        flex-direction: row;
-    }
-}
-
 .container-left {
     width: 20%;
     background-color: white;
@@ -30,6 +24,7 @@ body {
     border-left-width: 2px;
 }
 
+
 .menu-item {
     display: block;
     margin-bottom: 1rem;
@@ -37,6 +32,32 @@ body {
     border: 1px solid;
     text-align: center;
 }
+
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+  
+}
+
+
+@media (max-width: 768px) {
+    .container-right {
+        border-left: none;
+    }
+    .container-left{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    .menu-item {
+        display: inline-block;
+    }
+   
+}
+
+
 
 .homero-img {
     width: 80%;
@@ -50,7 +71,7 @@ body {
 }
 
 .text-bio {
-    text-align: justify;
+    text-align: center;
     font-style: italic;
     line-height: 2;
 }
@@ -75,6 +96,15 @@ h2 {
 }
 
 .show-error {
+    display: block;
+}
+
+.send{
+    color: green;
+    display: none;
+}
+
+.show-send-succed{
     display: block;
 }
 
